@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+abstract class book
+{
+    void abstractsetdetails()
+    {
+        
+    }   
+    void abstractgettitle()
+    {
+        
+    }
+    
+}
+    
+class mybook extends book
+{
+    String title;
+    String author;
+    int price;
+    void setdetails()
+    {
+        Scanner obj=new Scanner(System.in);
+        System.out.println("Details of the books:");
+        System.out.println("Enter the title of the book:");
+        title=obj.nextLine();
+        System.out.println("Enter the author of the book:");
+        author=obj.nextLine();
+        System.out.println("Enter the price of the book:");
+        price+=obj.nextInt();
+        System.out.println("Total price of the book:");
+        System.out.println(price);
+    }     
+     
+}
+
+public class sample4 {
+
+     public static void main(String[] args) {
+        mybook obj=new mybook();
+        for(int i=0;i<3;i++)
+        {   
+            obj.setdetails();
+            
+        }
+       
+    }
+  
+}
